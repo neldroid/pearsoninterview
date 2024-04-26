@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PearsonInterview</string>
+    <string name="not_connected_message">No internet connection</string>
+</resources>

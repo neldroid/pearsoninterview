@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_list_message">There is nothing to show in this moment</string>
+    <string name="error_message_title">Ups, there was an error</string>
+    <string name="error_message_description">Error: %1$s</string>
+    <string name="refresh_action">Refresh</string>
+</resources>
