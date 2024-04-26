@@ -31,8 +31,8 @@ class HomeViewModelTest {
     fun testLoadingState() = runTest {
         mockRepository.sendItems(emptyList())
 
-        viewModel.homeUiState.test {
-            viewModel.refresh()
+        viewModel.uiState.test {
+            viewModel.fetchItemList()
 
             expectMostRecentItem() is HomeUiState.Loading
 
@@ -45,8 +45,8 @@ class HomeViewModelTest {
         val items = listOf(Item("", "", "", ""), Item("", "", "", ""))
         mockRepository.sendItems(items)
 
-        viewModel.homeUiState.test {
-            viewModel.refresh()
+        viewModel.uiState.test {
+            viewModel.fetchItemList()
 
             expectMostRecentItem() is HomeUiState.Loading
 
@@ -62,7 +62,7 @@ class HomeViewModelTest {
         )
         mockRepository.sendItems(items)
 
-        viewModel.refresh()
+        viewModel.fetchItemList()
 
         val itemList = viewModel.itemList.first()
 
